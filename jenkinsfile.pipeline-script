@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                sh 'echo "puts \'Hello World from Ruby\'" > hello.rb'
+                sh 'ruby hello.rb'
+            }
+        }
+    }
+}
